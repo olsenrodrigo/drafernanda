@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+/*
+ * Paleta tirada do próprio consultório: madeira clara e linho (fundos),
+ * o verde das plantas (cor principal), a argila do couro das cadeiras (acento)
+ * e o nanquim dos quadros (texto e o traço circular usado como motivo).
+ */
+@theme {
+  --color-linho: #f6f1e8;
+  --color-papel: #fffcf7;
+  --color-areia: #eadfcc;
+  --color-tinta: #22251f;
+  --color-grafite: #555a4f;
+  --color-folha: #3d5134;
+  --color-folha-escura: #28361f;
+  --color-salvia: #9aab88;
+  --color-salvia-clara: #e4e9d9;
+  --color-argila: #a9582f;
+  --color-argila-clara: #d9a27f;
+
+  --font-serif: "Literata", Georgia, "Times New Roman", serif;
+  --font-sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --container-texto: 40rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    background-color: var(--color-linho);
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-linho);
+    color: var(--color-tinta);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    overflow-x: clip;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: var(--color-salvia-clara);
+    color: var(--color-folha-escura);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-argila);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .envoltorio {
+    width: 100%;
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .envoltorio {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  .rotulo {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    min-height: 3rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.975rem;
+    line-height: 1.2;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+  .botao:active {
+    transform: translateY(1px);
+  }
+  .botao-cheio {
+    background: var(--color-folha);
+    color: var(--color-papel);
+  }
+  .botao-cheio:hover {
+    background: var(--color-folha-escura);
+  }
+  .botao-claro {
+    background: var(--color-papel);
+    color: var(--color-folha-escura);
+  }
+  .botao-claro:hover {
+    background: var(--color-salvia-clara);
+  }
+  .botao-linha {
+    border: 1px solid color-mix(in srgb, var(--color-tinta) 28%, transparent);
+    color: var(--color-tinta);
+  }
+  .botao-linha:hover {
+    border-color: var(--color-folha);
+    color: var(--color-folha);
+  }
+
+  .link-sublinhado {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+    text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+    transition: text-decoration-color 0.2s;
+  }
+  .link-sublinhado:hover {
+    text-decoration-color: currentColor;
+  }
+
+  .campo {
+    width: 100%;
+    min-height: 3rem;
+    padding: 0.75rem 0.95rem;
+    border-radius: 0.6rem;
+    border: 1px solid color-mix(in srgb, var(--color-tinta) 18%, transparent);
+    background: #fff;
+    color: var(--color-tinta);
+    font-size: 1rem;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
+  }
+  .campo::placeholder {
+    color: color-mix(in srgb, var(--color-grafite) 70%, transparent);
+  }
+  .campo:focus {
+    outline: none;
+    border-color: var(--color-folha);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-salvia) 35%, transparent);
+  }
+
+  /* FAQ com <details>: funciona sem JavaScript e no HTML pré-renderizado */
+  .duvida summary {
+    list-style: none;
+    cursor: pointer;
+  }
+  .duvida summary::-webkit-details-marker {
+    display: none;
+  }
+  .duvida .sinal {
+    transition: transform 0.25s ease;
+  }
+  .duvida[open] .sinal {
+    transform: rotate(45deg);
+  }
+}
+
+/*
+ * Entrada suave das seções. Só esconde o conteúdo quando há JavaScript
+ * (classe `js` posta no <html> pelo index.html); sem JS, tudo aparece.
+ */
+.js .revelar {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.js .revelar.visivel {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .js .revelar {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
