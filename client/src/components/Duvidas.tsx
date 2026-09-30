@@ -1,5 +1,5 @@
 import { Plus } from "lucide-react";
-import { duvidas, contato, instagramUrl } from "@/content/site";
+import { duvidas, duvidasIntro } from "@/content/site";
 
 export default function Duvidas() {
   return (
@@ -9,18 +9,9 @@ export default function Duvidas() {
           <p className="rotulo mb-4 text-argila">Dúvidas</p>
           <h2 className="text-[2rem] sm:text-4xl leading-tight text-tinta md:text-[2.75rem]">Perguntas frequentes</h2>
           <p className="mt-5 max-w-[24rem] leading-relaxed text-grafite">
-            Ficou alguma pergunta? Escreva para{" "}
-            <a href={`mailto:${contato.email}`} className="link-sublinhado text-folha">
-              {contato.email}
-            </a>{" "}
-            ou fale pelo{" "}
-            <a
-              href={instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-sublinhado text-folha"
-            >
-              Instagram
+            {duvidasIntro}{" "}
+            <a href="#agendar" className="link-sublinhado text-folha">
+              entre em contato
             </a>
             .
           </p>

@@ -1,6 +1,7 @@
 /**
- * Todo o texto do site mora aqui, espelhando o documento de copy
- * ("SITE COPY Dra Fernanda Furmankiewicz.md"). Os componentes só desenham.
+ * Todo o texto do site mora aqui. Base: "SITE COPY Dra Fernanda Furmankiewicz.md",
+ * revisada pela cliente em "site fernanda furmankiewicz .docx" (tom acolhedor e
+ * educativo: sem confronto, sem promessa de resultado). Os componentes só desenham.
  *
  * Pendências da cliente (ver seção 13 da copy):
  * - `contato.whatsapp`: vazio enquanto o número do WhatsApp Business não chega.
@@ -18,7 +19,7 @@ export const profissional = {
   profissao: "Nutricionista",
   crn: "CRN 6042",
   formacao: "Formação USP",
-  experiencia: "30+ anos de experiência",
+  experiencia: "Mais de 30 anos de carreira",
 };
 
 export const contato = {
@@ -74,282 +75,328 @@ export const navegacao = [
 ];
 
 export const abertura = {
-  titulo: "Nutrição de verdade, para quem decidiu cuidar da saúde",
-  destaque: "a longo prazo",
+  titulo: "Alimentação que cuida",
+  destaque: "da sua saúde",
   subtitulo:
-    "Mais de 30 anos de experiência clínica e formação pela USP. Um método que explica o porquê de cada orientação — para você entender, não só seguir regras.",
+    "Com orientação individualizada e baseada em ciência, você aprende a fazer escolhas que combinam com sua saúde, seus gostos e sua rotina.",
+  apoio:
+    "Na consulta, sua história, seus hábitos e suas necessidades são considerados para construir orientações possíveis de colocar em prática no dia a dia.",
   ctaPrincipal: "Agendar minha consulta",
-  ctaSecundario: "Conhecer o método",
-  selos: ["30+ anos de experiência", "Formação USP", profissional.crn],
+  ctaSecundario: "Conhecer a Dra. Fernanda",
+  selos: ["Formação USP", "Presencial e online", profissional.crn],
 };
 
 export const sobre = {
   titulo: "Quem é a Dra. Fernanda",
   paragrafos: [
-    "Formada em Nutrição pela USP — uma das escolas mais tradicionais do país —, a Dra. Fernanda Furmankiewicz acumula mais de 30 anos de atuação clínica. Ao longo desse tempo, viu a nutrição se transformar num assunto pulverizado nas redes sociais, cheio de promessas milagrosas e regras sem explicação. Ela seguiu um caminho diferente.",
-    "Seu trabalho não é sobre listas de alimentos proibidos ou resultado da noite para o dia. É sobre entender como o seu corpo funciona, por que cada orientação faz sentido para a sua rotina, e construir — com tempo e acompanhamento — uma relação com a comida que sustenta energia, saúde e qualidade de vida no longo prazo.",
+    "Sou nutricionista formada pela USP. Minha experiência de mais de 30 anos ao longo da carreira, em diferentes áreas da nutrição, ampliou meu olhar sobre a alimentação e contribui para a forma como avalio e oriento cada paciente.",
+    "Acredito que uma alimentação saudável também precisa ser saborosa, prazerosa e possível de compartilhar. Por isso, nas consultas, considero não apenas as necessidades de saúde, mas também a história, os hábitos, a cultura e a rotina de cada pessoa. Gosto de explicar as orientações e ajudar a construir mudanças práticas que possam fazer parte da vida, sem deixar de lado o prazer de comer.",
   ],
   trajetoriaTitulo: "Trajetória",
   trajetoria: [
     "Formação em Nutrição pela USP, com base científica tradicional.",
-    "Mais de 30 anos de atuação clínica, atendendo pacientes de todas as idades — inclusive crianças, a partir do momento em que já conseguem entender a lógica do que estão comendo, sempre com a participação dos pais.",
-    "Consultas construídas em torno da educação nutricional: cada orientação vem acompanhada da explicação de como e por que funciona.",
-    "Acompanhamento apoiado em dados mensuráveis, com avaliação de composição corporal (bioimpedância) na maior parte das consultas.",
-    "Atendimento individual, de casal ou em família — porque mudar hábito sozinho, numa casa onde ninguém mais muda, raramente funciona.",
+    "Uma trajetória em diferentes áreas da nutrição que amplia o olhar sobre os hábitos alimentares e as necessidades de cada paciente.",
+    "Orientações construídas com o paciente, para que ele compreenda a lógica das escolhas alimentares e possa aplicá-las com segurança no dia a dia.",
+    "Acompanhamento apoiado em dados mensuráveis, com avaliação de composição corporal (bioimpedância).",
+    "Quando necessário, o atendimento pode envolver a família, para facilitar mudanças na rotina alimentar de todos.",
   ],
 };
 
 export const sinais = {
+  rotulo: "Orientação nutricional",
   titulo: "Quando procurar uma nutricionista",
   intro:
-    "Algumas situações que aparecem com frequência no consultório. Se uma delas descreve o seu momento, vale conversar.",
+    "A orientação nutricional pode ajudar em diferentes momentos da vida. Não é preciso esperar um diagnóstico para começar a cuidar da alimentação.",
   itens: [
     {
-      titulo: "Ganho de peso sem explicação aparente",
+      titulo: "Quer aprender a se alimentar melhor",
       texto:
-        "Mesmo comendo “normal”, o peso sobe e você não entende por quê — muitas vezes é uma questão de rotina e composição corporal, não de força de vontade.",
+        "Entender como montar refeições equilibradas e fazer escolhas possíveis na sua rotina é uma forma de cuidar da saúde hoje e ao longo da vida.",
     },
     {
-      titulo: "Emagreceu rápido, mas está sem energia",
+      titulo: "Percebeu mudanças no peso e quer entendê-las",
       texto:
-        "Perdeu peso e, junto, perdeu força, disposição e massa magra. Isso não é normal nem definitivo — dá para reconstruir.",
+        "O peso pode mudar por diferentes motivos. Uma avaliação individual ajuda a olhar para a alimentação, a rotina e a composição corporal sem recorrer a restrições por conta própria.",
     },
     {
-      titulo: "Diagnóstico de diabetes ou pré-diabetes sem orientação nutricional",
-      texto: "Recebeu a medicação, mas ninguém te explicou o que fazer no prato no dia a dia.",
-    },
-    {
-      titulo: "Mudanças na menopausa ou perimenopausa",
+      titulo: "Perdeu peso e percebeu queda de força ou disposição",
       texto:
-        "O metabolismo muda, o corpo responde diferente — e a alimentação precisa se ajustar junto.",
+        "Além do número na balança, vale observar como você está se sentindo e avaliar se a alimentação atende às suas necessidades.",
     },
     {
-      titulo: "Quer mudar a alimentação da família, não só a sua",
-      texto: "Sozinho(a), é difícil sustentar uma mudança que o resto da casa não acompanha.",
-    },
-    {
-      titulo: "Já tentou várias dietas da internet e não confia mais em nenhuma",
+      titulo: "Recebeu um diagnóstico de diabetes ou pré-diabetes",
       texto:
-        "Excesso de informação contraditória deixa qualquer um perdido sobre o que realmente funciona.",
+        "A orientação nutricional ajuda a entender como organizar as refeições no dia a dia e a fazer escolhas adequadas ao seu tratamento.",
     },
     {
-      titulo: "Colesterol alto, resistência à insulina ou síndrome metabólica",
+      titulo: "Está passando pela menopausa ou perimenopausa",
       texto:
-        "Condições que pedem ajuste alimentar estruturado, não só “cortar isso ou aquilo”.",
+        "Essa fase pode trazer novas dúvidas sobre alimentação, sintomas, peso e saúde. O acompanhamento considera suas necessidades e sua rotina.",
     },
     {
-      titulo: "Come pouco, mas não vê resultado",
+      titulo: "Quer melhorar a alimentação da família",
       texto:
-        "Comer menos não é o mesmo que comer bem — às vezes falta nutriente, não falta restrição.",
+        "É possível pensar em refeições saudáveis, saborosas e práticas para a casa, respeitando os gostos e os hábitos de quem vive nela.",
+    },
+    {
+      titulo: "Está confuso com tantas dietas e informações",
+      texto:
+        "Entre regras e recomendações contraditórias, uma orientação individualizada ajuda a entender o que é relevante para você.",
+    },
+    {
+      titulo: "Precisa cuidar do colesterol ou de outras alterações metabólicas",
+      texto:
+        "Condições como colesterol alto, resistência à insulina e síndrome metabólica pedem orientações ajustadas à sua saúde, sem transformar a alimentação em uma lista de proibições.",
+    },
+    {
+      titulo: "Tem dúvidas sobre quanto e como comer",
+      texto:
+        "Se você tenta cuidar da alimentação, mas ainda não sabe como distribuir as refeições ou ajustar as porções, a consulta ajuda a avaliar seus hábitos e encontrar caminhos práticos.",
     },
   ],
+  fechamento:
+    "Seja para prevenir, aprender ou lidar com uma condição de saúde, a alimentação pode ser cuidada de forma individualizada e possível de manter.",
 };
 
 export const atendimentos = {
-  titulo: "Atendimentos",
+  rotulo: "Atendimentos",
+  titulo: "Áreas de atendimento",
   intro:
-    "Cada acompanhamento parte da sua rotina e do seu histórico. Estas são as frentes em que a Dra. Fernanda mais atua.",
+    "O acompanhamento nutricional considera a saúde, os objetivos e a rotina de cada pessoa e pode ajudar nos seguintes cuidados:",
   servicos: [
     {
-      titulo: "Emagrecimento saudável",
+      titulo: "Alimentação saudável e prevenção",
       texto:
-        "Planejamento alimentar com foco em perda de peso e manutenção real a longo prazo — sem dieta milagrosa.",
+        "Orientações para melhorar a qualidade da alimentação, organizar as refeições e construir hábitos que contribuam para a saúde ao longo da vida.",
     },
     {
-      titulo: "Reeducação alimentar",
+      titulo: "Emagrecimento e composição corporal",
       texto:
-        "Mudança de hábitos de forma gradual e sustentável, no ritmo que cabe na sua rotina.",
+        "Planejamento alimentar individualizado para cuidar do peso e da composição corporal, respeitando as necessidades, as preferências e o momento de cada paciente.",
     },
     {
-      titulo: "Nutrição para diabetes",
+      titulo: "Nutrição no cuidado de condições de saúde",
       texto:
-        "Controle alimentar para equilíbrio glicêmico e qualidade de vida — sem alarmismo e sem privação desnecessária.",
+        "Orientações alimentares adaptadas ao quadro clínico e ao tratamento, considerando exames, sintomas e necessidades individuais.",
     },
     {
-      titulo: "Nutrição na menopausa",
+      titulo: "Nutrição para diabetes e pré-diabetes",
       texto:
-        "Ajustes nutricionais para os sintomas hormonais e as mudanças no metabolismo típicas dessa fase.",
+        "Orientações para entender a relação entre alimentação e glicemia e organizar as refeições com mais segurança, considerando o tratamento, as preferências e a rotina de cada pessoa.",
     },
     {
-      titulo: "Nutrição esportiva",
-      texto: "Acompanhamento alimentar para melhora de desempenho físico e recuperação.",
-    },
-    {
-      titulo: "Avaliação de composição corporal (bioimpedância)",
+      titulo: "Alimentação nas diferentes fases da vida",
       texto:
-        "Exame não invasivo que analisa gordura corporal, massa magra e hidratação — acompanhamento preciso da sua evolução, além da balança.",
+        "Acompanhamento das mudanças nas necessidades nutricionais ao longo da vida, com atenção à saúde, à disposição e à qualidade de vida.",
     },
     {
-      titulo: "Nutrição para gestantes",
-      texto: "Suporte nutricional durante a gestação, com foco na saúde da mãe e do bebê.",
-    },
-    {
-      titulo: "Nutrição familiar",
+      titulo: "Nutrição para a prática de atividade física",
       texto:
-        "Orientação alimentar para toda a família, pensada para a rotina e a praticidade de casa.",
+        "Adequação da alimentação à rotina de exercícios, aos objetivos e às necessidades de recuperação.",
     },
   ],
-  condicoesTitulo: "Também são atendidas as condições",
-  condicoes: [
-    "Obesidade e sobrepeso",
-    "Resistência à insulina",
-    "Diabetes tipo 2",
-    "Compulsão alimentar",
-    "Colesterol alto (dislipidemia)",
-    "Síndrome metabólica",
-    "Alterações hormonais na menopausa",
-  ],
+  formatos: {
+    titulo: "Formatos de atendimento",
+    texto:
+      "Consultas individuais ou em família, presenciais ou online, conforme as necessidades de cada atendimento.",
+  },
 };
 
 export type Destaque = {
   id: string;
   rotulo: string;
   titulo: string;
-  texto: string;
-  beneficios: string[];
-  passos: string[];
+  paragrafos: string[];
+  foco: string[];
+  passos: { titulo: string; texto: string }[];
   cta: string;
   mensagem: string;
 };
 
 export const destaques: Destaque[] = [
   {
-    id: "pos-emagrecimento",
-    rotulo: "Pós-emagrecimento",
-    titulo: "Energia, força e massa magra de volta",
-    texto:
-      "Emagrecer é só a primeira etapa. Quando a perda de peso é rápida, o que sai não é só gordura — sai massa magra também, e é ela que sustenta sua energia, sua força e o seu metabolismo. Cansaço extremo, flacidez e falta de disposição depois de emagrecer não são normais nem definitivos: são sinal de que falta reconstruir o que se perdeu no caminho.",
-    beneficios: [
-      "Recuperação de energia e disposição no dia a dia",
-      "Preservação e reconstrução de massa magra",
-      "Acompanhamento mensurável por bioimpedância, não só pela balança",
-      "Plano alimentar que cabe no seu apetite e na sua rotina atuais",
+    id: "perda-de-peso",
+    rotulo: "Perda de peso",
+    titulo: "Cuidado nutricional durante e após a perda de peso",
+    paragrafos: [
+      "O cuidado vai além do emagrecimento. A qualidade da alimentação, a preservação da massa muscular e a manutenção da força e da disposição também merecem atenção durante e após a perda de peso.",
+      "O acompanhamento nutricional considera as necessidades, o apetite e a rotina de cada pessoa, com orientações que favoreçam mudanças duradouras. O objetivo é cuidar da saúde no presente e contribuir para uma longevidade com autonomia e qualidade de vida.",
+    ],
+    foco: [
+      "Alimentação equilibrada e adequada às necessidades individuais.",
+      "Estratégias nutricionais para favorecer a preservação da massa muscular.",
+      "Avaliação da evolução, considerando a composição corporal e outros indicadores de saúde.",
+      "Hábitos que possam ser mantidos após a perda de peso, respeitando as preferências e o prazer de comer.",
     ],
     passos: [
-      "Avaliação inicial detalhada (rotina, hábitos, histórico) + bioimpedância",
-      "Plano alimentar construído com você, com a explicação do porquê de cada escolha",
-      "Acompanhamento contínuo, com retorno por vídeo entre consultas quando necessário",
+      {
+        titulo: "Avaliação individualizada",
+        texto:
+          "Conhecimento da história de saúde, dos hábitos, da rotina e dos objetivos, com avaliação da composição corporal quando indicada.",
+      },
+      {
+        titulo: "Planejamento alimentar personalizado",
+        texto:
+          "Orientações práticas, considerando as necessidades nutricionais, o apetite e as preferências, com compreensão da lógica das escolhas alimentares.",
+      },
+      {
+        titulo: "Acompanhamento e ajustes",
+        texto:
+          "Reavaliação das necessidades e adaptação das orientações ao longo do processo, para apoiar a continuidade do cuidado.",
+      },
     ],
-    cta: "Quero reconstruir minha energia",
+    cta: "Agendar consulta",
     mensagem:
-      "Olá, Dra. Fernanda! Emagreci e quero recuperar energia e massa magra. Gostaria de agendar uma consulta.",
+      "Olá, Dra. Fernanda! Gostaria de agendar uma consulta sobre alimentação durante ou após a perda de peso.",
   },
   {
     id: "diabetes",
     rotulo: "Diabetes",
-    titulo: "O prato que evita que a dose só aumente",
-    texto:
-      "Muita gente sai da consulta com o endocrinologista com a medicação prescrita, mas sem ninguém para explicar o que fazer no prato. O resultado costuma ser medo, restrição excessiva e desnecessária — e, às vezes, um controle que não melhora porque o erro alimentar nunca foi identificado.",
-    beneficios: [
-      "Entendimento claro do que realmente impacta a sua glicemia",
-      "Alimentação equilibrada, sem viver de sopa e privação extrema",
-      "Menos dependência de achismo e palpite de terceiros",
-      "Uma alimentação que, no fim das contas, é uma alimentação saudável para qualquer pessoa",
+    titulo: "Alimentação no cuidado do diabetes",
+    paragrafos: [
+      "A alimentação é parte essencial do tratamento do diabetes e do cuidado do pré-diabetes. Ao lado da medicação, quando indicada, da atividade física e do acompanhamento de saúde, contribui para o controle da glicemia e para a saúde ao longo da vida.",
+      "O acompanhamento nutricional ajuda a compreender como os alimentos, as porções e os horários das refeições se relacionam com a glicemia. As orientações consideram o tratamento, as preferências e a rotina de cada pessoa, preservando a variedade, o sabor e o prazer de comer.",
+    ],
+    foco: [
+      "Compreensão das escolhas alimentares e de seus efeitos sobre a glicemia.",
+      "Organização das refeições, com atenção às porções, combinações e horários.",
+      "Alimentação adequada às necessidades individuais e ao tratamento.",
+      "Construção de hábitos que contribuam para a saúde e a qualidade de vida ao longo do tempo.",
     ],
     passos: [
-      "Avaliação completa do quadro clínico e da rotina alimentar atual",
-      "Identificação dos erros alimentares que impactam o controle glicêmico",
-      "Plano de ajuste gradual, com acompanhamento contínuo",
+      {
+        titulo: "Avaliação individualizada",
+        texto:
+          "Análise da história de saúde, dos exames, dos medicamentos em uso e da rotina alimentar.",
+      },
+      {
+        titulo: "Orientações práticas e personalizadas",
+        texto:
+          "Planejamento alimentar que ajuda a compreender a lógica das escolhas e aplicá-las com segurança no dia a dia.",
+      },
+      {
+        titulo: "Acompanhamento e ajustes",
+        texto:
+          "Reavaliação dos hábitos e dos resultados, com ajustes nas orientações e integração com o cuidado da equipe de saúde.",
+      },
     ],
-    cta: "Quero entender minha alimentação",
+    cta: "Agendar consulta",
     mensagem:
-      "Olá, Dra. Fernanda! Tenho diabetes (ou pré-diabetes) e quero entender minha alimentação. Gostaria de agendar uma consulta.",
+      "Olá, Dra. Fernanda! Gostaria de agendar uma consulta sobre alimentação no cuidado do diabetes (ou pré-diabetes).",
   },
 ];
 
 export const diferenciais = {
   titulo: "Como é o acompanhamento",
-  intro: "O que você encontra no consultório — e o que não vai encontrar.",
   itens: [
     {
-      titulo: "Consulta de verdade, não de 15 minutos",
+      titulo: "Escuta e atenção à sua realidade",
       texto:
-        "A primeira consulta dura em torno de 1 hora — tempo para entender sua rotina, seus hábitos e seu histórico com profundidade.",
+        "A consulta é um espaço para conhecer sua saúde, seus hábitos, suas preferências e sua rotina, com atenção às dúvidas e dificuldades que você traz.",
     },
     {
-      titulo: "Você entende o porquê",
+      titulo: "Compreensão das escolhas alimentares",
       texto:
-        "Cada orientação vem acompanhada da explicação de como o seu corpo processa aquele alimento — não é uma lista de regras soltas.",
+        "Entender a lógica das orientações ajuda a fazer escolhas com mais segurança e autonomia, em diferentes situações do cotidiano.",
     },
     {
-      titulo: "Resultado mensurável, não só a balança",
+      titulo: "Avaliação da composição corporal",
       texto:
-        "Avaliação de composição corporal por bioimpedância acompanha sua evolução real: massa magra, gordura corporal e hidratação.",
+        "Quando indicado, o exame de bioimpedância complementa a avaliação nutricional e ajuda a acompanhar mudanças na composição corporal ao longo do tempo.",
     },
     {
-      titulo: "Atendimento em família ou casal",
+      titulo: "Planejamento alimentar individualizado",
       texto:
-        "Quando faz sentido, a consulta pode incluir quem mais precisa participar da mudança — porque hábito não muda sozinho numa casa inteira.",
+        "As orientações consideram suas necessidades e seus objetivos, respeitando seus gostos, hábitos culturais e o prazer de comer.",
     },
     {
-      titulo: "Acompanhamento contínuo",
+      titulo: "Continuidade do cuidado",
       texto:
-        "Retorno por vídeo entre consultas presenciais, quando necessário — você não fica sozinho(a) até a próxima consulta.",
+        "O acompanhamento permite esclarecer dúvidas e ajustar as orientações conforme sua evolução. O retorno online é combinado durante a consulta, de acordo com as necessidades de cada paciente.",
     },
     {
-      titulo: "Ciência, sem modismo",
+      titulo: "Cuidado apoiado em ciência",
       texto:
-        "Trinta anos de formação tradicional (USP) aplicados à sua vida real — sem dieta milagrosa, sem promessa vazia.",
+        "O conhecimento científico orienta a avaliação e as recomendações, com atenção à saúde no presente e à construção de uma longevidade com autonomia e qualidade de vida.",
     },
   ],
+  cta: "Agendar consulta",
 };
 
 export type Duvida = { pergunta: string; resposta: string };
+
+export const duvidasIntro =
+  "Confira algumas informações sobre as consultas. Para outras dúvidas,";
 
 export const duvidas: Duvida[] = [
   {
     pergunta: "A consulta é presencial ou online?",
     resposta:
-      "Os dois formatos existem. O atendimento presencial acontece às quartas-feiras pela manhã; o online pode ser agendado em outros dias, conforme disponibilidade.",
+      "Os atendimentos estão disponíveis nos dois formatos. As consultas presenciais no Instituto Emunah acontecem às quartas-feiras pela manhã. As consultas online podem ser agendadas em outros dias, conforme disponibilidade.",
   },
   {
-    pergunta: "Vocês atendem convênio?",
-    resposta: "O atendimento é apenas particular.",
+    pergunta: "O atendimento é por convênio?",
+    resposta: "O atendimento é particular.",
   },
   {
-    pergunta: "Quanto tempo dura a primeira consulta?",
+    pergunta: "Como é a primeira consulta?",
     resposta:
-      "Em torno de 1 hora — tempo necessário para entender sua rotina, seus hábitos e seu histórico com profundidade.",
+      "A primeira consulta inclui uma conversa sobre sua saúde, sua história alimentar, seus hábitos e seus objetivos. A avaliação nutricional orienta um planejamento adequado às suas necessidades e à sua rotina.",
   },
   {
-    pergunta: "É possível fazer consulta em família ou casal?",
+    pergunta: "É possível realizar consultas de casal ou em família?",
     resposta:
-      "Sim. Quando faz sentido para o caso, o atendimento pode incluir outras pessoas da casa, com condições especiais para esse formato.",
+      "Sim. O atendimento pode envolver o casal ou a família, considerando as necessidades individuais e a organização da alimentação em casa. O formato é definido no agendamento.",
   },
   {
-    pergunta: "Depois da primeira consulta, como funciona o retorno?",
+    pergunta: "Como funciona o retorno?",
     resposta:
-      "Quando necessário, o retorno acontece por vídeo, geralmente cerca de 15 dias depois — sem deixar você sem suporte até a próxima consulta presencial.",
+      "Após a consulta presencial, pode ser realizado um retorno online gratuito no mesmo mês, conforme a necessidade e o combinado durante o atendimento. Esse encontro permite esclarecer dúvidas e ajustar as orientações.",
   },
   {
     pergunta: "Preciso levar exames?",
     resposta:
-      "Se você já tiver exames recentes, é útil trazê-los. Também é feita, na maioria das consultas, uma avaliação de composição corporal (bioimpedância) no próprio atendimento.",
+      "Se houver exames recentes, é importante levá-los à consulta, junto com informações sobre medicamentos e suplementos em uso.",
+  },
+  {
+    pergunta: "A consulta inclui bioimpedância?",
+    resposta:
+      "A avaliação da composição corporal por bioimpedância pode ser realizada na consulta presencial, quando indicada. As orientações de preparo são informadas no agendamento.",
   },
 ];
 
 export const agendar = {
-  titulo: "Chega de tentar sozinho(a).",
-  subtitulo: "Vamos construir, juntos, uma alimentação que sustente a sua vida real.",
+  titulo: "Seu cuidado pode começar com uma conversa",
+  subtitulo:
+    "Orientação nutricional para cuidar da saúde, respeitando sua rotina, suas preferências e o prazer de comer.",
+  formTitulo: "Entre em contato para agendar",
+  formTexto: "Informe seus dados para consultar a disponibilidade de horários.",
   objetivos: [
-    "Emagrecimento saudável",
-    "Diabetes",
-    "Menopausa",
-    "Nutrição familiar",
-    "Nutrição esportiva",
-    "Gestação",
-    "Outro",
+    "Alimentação saudável e prevenção",
+    "Emagrecimento e composição corporal",
+    "Cuidado durante e após a perda de peso",
+    "Diabetes ou pré-diabetes",
+    "Outras condições de saúde",
+    "Fases da vida (como a menopausa)",
+    "Atividade física",
+    "Alimentação da família",
+    "Prefiro conversar sobre isso na consulta",
   ],
-  botao: "Quero agendar minha consulta",
+  botaoEmail: "Enviar solicitação por e-mail",
+  avisoEmail:
+    "Ao clicar, seu aplicativo de e-mail será aberto com a solicitação preenchida. Para concluir o contato, envie a mensagem.",
+  botaoWhatsapp: "Enviar solicitação pelo WhatsApp",
+  avisoWhatsapp:
+    "Ao clicar, o WhatsApp será aberto com a solicitação preenchida. Para concluir o contato, envie a mensagem.",
   unidade: [
-    { rotulo: "Atendimento presencial", texto: "Quartas-feiras pela manhã (consultório EMNH)" },
-    { rotulo: "Atendimento online", texto: "Demais dias, mediante agendamento" },
-    { rotulo: "Convênio", texto: "Atendimento apenas particular" },
+    { rotulo: "Atendimento presencial", texto: "Quartas-feiras pela manhã, no Instituto Emunah" },
+    { rotulo: "Atendimento online", texto: "Outros dias, conforme disponibilidade" },
+    { rotulo: "Convênio", texto: "Atendimento particular" },
   ],
 };
 
 export const seo = {
   title: "Fernanda Furmankiewicz | Nutricionista em São Paulo",
   description:
-    "Nutricionista com 30+ anos de experiência (USP). Emagrecimento saudável, diabetes, menopausa e nutrição familiar em São Paulo. Agende sua consulta.",
+    "Nutricionista formada pela USP, em São Paulo. Orientação individualizada e baseada em ciência para alimentação saudável, emagrecimento, diabetes e diferentes fases da vida. Consultas presenciais e online.",
 };

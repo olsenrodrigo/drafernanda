@@ -41,13 +41,13 @@ export default function Agendar() {
     if (dados.nome.trim().length < 3) return setErro("Informe seu nome completo.");
     if (dados.telefone.replace(/\D/g, "").length < 10)
       return setErro("Informe um WhatsApp com DDD.");
-    if (!dados.objetivo) return setErro("Escolha o seu principal objetivo.");
+    if (!dados.objetivo) return setErro("Escolha uma opção sobre o acompanhamento.");
 
     const ficha = [
       `Nome: ${dados.nome.trim()}`,
       `WhatsApp: ${dados.telefone}`,
       dados.email.trim() ? `E-mail: ${dados.email.trim()}` : "",
-      `Objetivo: ${dados.objetivo}`,
+      `Acompanhamento: ${dados.objetivo}`,
       dados.mensagem.trim() ? `Mensagem: ${dados.mensagem.trim()}` : "",
     ].filter(Boolean);
     const texto = ["Olá, Dra. Fernanda! Gostaria de agendar uma consulta.", "", ...ficha].join("\n");
@@ -132,11 +132,9 @@ export default function Agendar() {
             noValidate
             className="rounded-[1.5rem] bg-papel p-6 text-tinta shadow-[0_40px_80px_-40px_rgba(0,0,0,0.5)] sm:p-9"
           >
-            <h3 className="font-serif text-2xl">Peça seu horário</h3>
+            <h3 className="font-serif text-2xl">{agendar.formTitulo}</h3>
             <p className="mt-2 text-[0.95rem] leading-relaxed text-grafite">
-              {temWhatsapp
-                ? "Preencha e enviaremos você ao WhatsApp com a mensagem pronta."
-                : "Preencha e seu aplicativo de e-mail abre com a mensagem pronta para enviar."}
+              {agendar.formTexto}
             </p>
 
             <div className="mt-7 grid gap-5 sm:grid-cols-2">
@@ -179,7 +177,7 @@ export default function Agendar() {
                 />
               </label>
               <label className="block sm:col-span-2">
-                <span className="mb-1.5 block text-[0.9rem] font-medium">Qual seu principal objetivo?</span>
+                <span className="mb-1.5 block text-[0.9rem] font-medium">O que você busca no acompanhamento?</span>
                 <select
                   className="campo appearance-none bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%228%22 viewBox=%220 0 12 8%22><path d=%22M1 1l5 5 5-5%22 stroke=%22%233d5134%22 stroke-width=%221.6%22 fill=%22none%22/></svg>')] bg-[length:12px_8px] bg-[position:right_1rem_center] bg-no-repeat pr-10"
                   name="objetivo"
@@ -216,15 +214,18 @@ export default function Agendar() {
             </p>
 
             <button type="submit" className="botao botao-cheio group mt-2 w-full">
-              {agendar.botao}
+              {temWhatsapp ? agendar.botaoWhatsapp : agendar.botaoEmail}
               <ArrowRight size={17} className="transition-transform group-hover:translate-x-0.5" />
             </button>
+            <p className="mt-3 text-center text-[0.85rem] leading-relaxed text-grafite">
+              {temWhatsapp ? agendar.avisoWhatsapp : agendar.avisoEmail}
+            </p>
 
             {enviado && !erro && (
               <p className="mt-4 text-center text-[0.9rem] text-folha" aria-live="polite">
                 {temWhatsapp
-                  ? "Abrimos o WhatsApp em outra aba. É só enviar a mensagem."
-                  : "Abrimos o seu e-mail com a mensagem pronta. É só enviar."}
+                  ? "O WhatsApp foi aberto em outra aba. Para concluir, envie a mensagem."
+                  : "Seu aplicativo de e-mail foi aberto com a solicitação. Para concluir, envie a mensagem."}
               </p>
             )}
           </form>

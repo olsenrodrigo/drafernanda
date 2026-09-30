@@ -15,7 +15,7 @@ export default function QuandoProcurar() {
       <div className="envoltorio relative">
         <div className="revelar grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-end">
           <div>
-            <p className="rotulo mb-4 text-argila-clara">Sinais de alerta</p>
+            <p className="rotulo mb-4 text-argila-clara">{sinais.rotulo}</p>
             <h2 className="text-[2rem] sm:text-4xl leading-tight md:text-[2.75rem]">{sinais.titulo}</h2>
           </div>
           <p className="max-w-[32rem] text-lg leading-relaxed text-papel/75 lg:justify-self-end">
@@ -23,14 +23,9 @@ export default function QuandoProcurar() {
           </p>
         </div>
 
-        <div className="mt-14 grid border-t border-papel/15 md:grid-cols-2">
+        <div className="mt-14 grid border-t border-papel/15 md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
           {sinais.itens.map((item, i) => (
-            <article
-              key={item.titulo}
-              className={`revelar border-b border-papel/15 py-8 md:px-8 ${
-                i % 2 === 0 ? "md:border-r md:pl-0" : "md:pr-0"
-              }`}
-            >
+            <article key={item.titulo} className="revelar border-b border-papel/15 py-8">
               <span className="font-serif text-sm italic text-salvia">
                 {String(i + 1).padStart(2, "0")}
               </span>
@@ -41,10 +36,8 @@ export default function QuandoProcurar() {
         </div>
 
         <div className="revelar mt-12 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-serif text-xl italic text-papel/85">
-            Se você se reconheceu em algum desses pontos, vale conversar.
-          </p>
-          <a href={linkAgendamento()} {...externo} className="botao botao-claro group">
+          <p className="max-w-[40rem] font-serif text-xl italic text-papel/85">{sinais.fechamento}</p>
+          <a href={linkAgendamento()} {...externo} className="botao botao-claro group shrink-0">
             Agendar minha consulta
             <ArrowRight size={17} className="transition-transform group-hover:translate-x-0.5" />
           </a>

@@ -23,6 +23,7 @@ export default function Abertura() {
           <p className="mt-6 max-w-[34rem] text-lg leading-relaxed text-grafite">
             {abertura.subtitulo}
           </p>
+          <p className="mt-4 max-w-[34rem] leading-relaxed text-grafite/90">{abertura.apoio}</p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a href={linkAgendamento()} {...externo} className="botao botao-cheio group">

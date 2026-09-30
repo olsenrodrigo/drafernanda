@@ -2,7 +2,7 @@ import { ArrowRight, Check } from "lucide-react";
 import fotoConsulta from "@/assets/fotos/fernanda-consulta.jpg";
 import { destaques, linkAgendamento, temWhatsapp, type Destaque } from "@/content/site";
 
-function Beneficios({ itens }: { itens: string[] }) {
+function Foco({ itens }: { itens: string[] }) {
   return (
     <ul className="space-y-3">
       {itens.map((b) => (
@@ -15,18 +15,31 @@ function Beneficios({ itens }: { itens: string[] }) {
   );
 }
 
-function Passos({ itens }: { itens: string[] }) {
+function Passos({ itens }: { itens: Destaque["passos"] }) {
   return (
     <ol className="space-y-5">
       {itens.map((p, i) => (
-        <li key={p} className="grid grid-cols-[2.25rem_1fr] gap-3">
+        <li key={p.titulo} className="grid grid-cols-[2.25rem_1fr] gap-3">
           <span className="grid h-9 w-9 place-items-center rounded-full border border-folha/30 font-serif text-[0.95rem] text-folha">
             {i + 1}
           </span>
-          <span className="pt-1 leading-relaxed text-tinta/85">{p}</span>
+          <span className="pt-1 leading-relaxed text-tinta/85">
+            <strong className="block font-semibold text-tinta">{p.titulo}</strong>
+            {p.texto}
+          </span>
         </li>
       ))}
     </ol>
+  );
+}
+
+function Paragrafos({ itens, className = "" }: { itens: string[]; className?: string }) {
+  return (
+    <div className={`space-y-4 text-lg leading-relaxed text-grafite ${className}`}>
+      {itens.map((p) => (
+        <p key={p.slice(0, 24)}>{p}</p>
+      ))}
+    </div>
   );
 }
 
@@ -41,18 +54,18 @@ function Chamada({ d }: { d: Destaque }) {
 }
 
 export default function Destaques() {
-  const [pos, diabetes] = destaques;
+  const [perda, diabetes] = destaques;
 
   return (
     <>
-      <section id={pos.id} className="bg-papel py-20 md:py-28">
+      <section id={perda.id} className="bg-papel py-20 md:py-28">
         <div className="envoltorio">
           <div className="revelar grid items-end gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
             <div>
-              <p className="rotulo mb-4 text-argila">{pos.rotulo}</p>
-              <h2 className="text-[2rem] sm:text-4xl leading-tight text-tinta md:text-[2.75rem]">{pos.titulo}</h2>
+              <p className="rotulo mb-4 text-argila">{perda.rotulo}</p>
+              <h2 className="text-[2rem] sm:text-4xl leading-tight text-tinta md:text-[2.75rem]">{perda.titulo}</h2>
             </div>
-            <p className="text-lg leading-relaxed text-grafite">{pos.texto}</p>
+            <Paragrafos itens={perda.paragrafos} />
           </div>
 
           <div className="mt-14 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
@@ -69,17 +82,17 @@ export default function Destaques() {
 
             <div className="revelar flex flex-col">
               <h3 className="mb-5 font-sans text-[0.95rem] font-semibold tracking-normal text-folha-escura">
-                Benefícios do acompanhamento
+                Foco do acompanhamento
               </h3>
-              <Beneficios itens={pos.beneficios} />
+              <Foco itens={perda.foco} />
 
               <h3 className="mb-5 mt-10 font-sans text-[0.95rem] font-semibold tracking-normal text-folha-escura">
                 Como funciona
               </h3>
-              <Passos itens={pos.passos} />
+              <Passos itens={perda.passos} />
 
               <div>
-                <Chamada d={pos} />
+                <Chamada d={perda} />
               </div>
             </div>
           </div>
@@ -91,12 +104,12 @@ export default function Destaques() {
           <div className="revelar">
             <p className="rotulo mb-4 text-argila">{diabetes.rotulo}</p>
             <h2 className="text-[2rem] sm:text-4xl leading-tight text-tinta md:text-[2.75rem]">{diabetes.titulo}</h2>
-            <p className="mt-6 text-lg leading-relaxed text-grafite">{diabetes.texto}</p>
+            <Paragrafos itens={diabetes.paragrafos} className="mt-6" />
 
             <h3 className="mb-5 mt-10 font-sans text-[0.95rem] font-semibold tracking-normal text-folha-escura">
-              Benefícios do acompanhamento
+              Foco do acompanhamento
             </h3>
-            <Beneficios itens={diabetes.beneficios} />
+            <Foco itens={diabetes.foco} />
           </div>
 
           <div className="revelar lg:pt-14">

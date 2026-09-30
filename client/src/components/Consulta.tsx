@@ -1,16 +1,17 @@
-import { Clock, BookOpen, Activity, Users, Video, Leaf } from "lucide-react";
-import { diferenciais } from "@/content/site";
+import { ArrowRight, MessageCircle, BookOpen, Activity, Utensils, RefreshCw, Leaf } from "lucide-react";
+import { diferenciais, linkAgendamento, temWhatsapp } from "@/content/site";
 
-const icones = [Clock, BookOpen, Activity, Users, Video, Leaf];
+const icones = [MessageCircle, BookOpen, Activity, Utensils, RefreshCw, Leaf];
 
 export default function Consulta() {
+  const externo = temWhatsapp ? { target: "_blank", rel: "noopener noreferrer" } : {};
+
   return (
     <section id="consulta" className="py-20 md:py-28">
       <div className="envoltorio">
         <div className="revelar max-w-2xl">
           <p className="rotulo mb-4 text-argila">A consulta</p>
           <h2 className="text-[2rem] sm:text-4xl leading-tight text-tinta md:text-[2.75rem]">{diferenciais.titulo}</h2>
-          <p className="mt-5 text-lg leading-relaxed text-grafite">{diferenciais.intro}</p>
         </div>
 
         <div className="mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
@@ -24,6 +25,13 @@ export default function Consulta() {
               </article>
             );
           })}
+        </div>
+
+        <div className="revelar mt-14">
+          <a href={linkAgendamento()} {...externo} className="botao botao-cheio group">
+            {diferenciais.cta}
+            <ArrowRight size={17} className="transition-transform group-hover:translate-x-0.5" />
+          </a>
         </div>
       </div>
     </section>

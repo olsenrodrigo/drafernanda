@@ -6,7 +6,7 @@ export default function Sobre() {
     <section id="sobre" className="bg-papel py-20 md:py-28">
       <div className="envoltorio grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <div className="revelar lg:sticky lg:top-28 lg:self-start">
-          <figure className="relative">
+          <figure>
             <img
               src={foto}
               alt="Dra. Fernanda Furmankiewicz à mesa do consultório"
@@ -15,12 +15,6 @@ export default function Sobre() {
               loading="lazy"
               className="aspect-[4/5] w-full rounded-[1.25rem] object-cover object-[50%_35%]"
             />
-            <figcaption className="absolute -bottom-6 left-6 right-6 flex items-end gap-4 rounded-2xl bg-folha-escura px-6 py-5 text-papel sm:left-auto sm:right-[-1.5rem] sm:max-w-[16rem]">
-              <span className="font-serif text-5xl leading-none">30+</span>
-              <span className="pb-1 text-[0.9rem] leading-snug text-papel/80">
-                anos de atuação clínica
-              </span>
-            </figcaption>
           </figure>
         </div>
 
