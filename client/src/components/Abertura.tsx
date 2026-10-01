@@ -54,11 +54,11 @@ export default function Abertura() {
           <figure className="relative overflow-hidden rounded-[1.75rem] shadow-[0_30px_60px_-30px_rgba(40,54,31,0.45)]">
             <img
               src={retrato}
-              alt="Dra. Fernanda Furmankiewicz sentada no consultório, sorrindo"
-              width={851}
-              height={1280}
+              alt="Dra. Fernanda Furmankiewicz sentada à mesa do consultório, sorrindo"
+              width={819}
+              height={1024}
               fetchPriority="high"
-              className="aspect-[4/5] w-full object-cover object-[50%_22%]"
+              className="aspect-[4/5] w-full object-cover object-[50%_30%]"
             />
           </figure>
           <p className="absolute -bottom-4 right-4 z-10 rounded-full bg-papel px-4 py-2 text-[0.8rem] font-medium text-tinta shadow-sm sm:right-8">

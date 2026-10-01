@@ -72,11 +72,11 @@ export default function Destaques() {
             <figure className="revelar">
               <img
                 src={fotoConsulta}
-                alt="Dra. Fernanda Furmankiewicz fazendo anotações durante o atendimento"
-                width={1600}
-                height={1200}
+                alt="Dra. Fernanda Furmankiewicz realizando avaliação de composição corporal por bioimpedância"
+                width={1448}
+                height={1086}
                 loading="lazy"
-                className="aspect-[4/3] w-full rounded-[1.25rem] object-cover object-[35%_50%]"
+                className="aspect-[4/3] w-full rounded-[1.25rem] object-cover object-center"
               />
             </figure>
 

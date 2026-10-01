@@ -9,11 +9,11 @@ export default function Sobre() {
           <figure>
             <img
               src={foto}
-              alt="Dra. Fernanda Furmankiewicz à mesa do consultório"
-              width={1050}
-              height={1400}
+              alt="Dra. Fernanda Furmankiewicz sorrindo à mesa do consultório"
+              width={450}
+              height={1024}
               loading="lazy"
-              className="aspect-[4/5] w-full rounded-[1.25rem] object-cover object-[50%_35%]"
+              className="aspect-[4/5] w-full rounded-[1.25rem] object-cover object-[50%_12%]"
             />
           </figure>
         </div>
