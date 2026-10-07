@@ -150,7 +150,7 @@ export const llms = [
   "",
   `${atendimentos.formatos.titulo}: ${atendimentos.formatos.texto}`,
   "",
-  "## Quando procurar uma nutricionista",
+  "## Quando procurar um nutricionista",
   "",
   sinais.intro,
   "",

@@ -7,7 +7,6 @@
  * - `contato.whatsapp`: vazio enquanto o número do WhatsApp Business não chega.
  *   Com ele vazio, os botões levam ao formulário e o formulário abre o e-mail.
  *   Preencha só com dígitos, com DDI e DDD: "5511999999999".
- * - `profissional.crn`: falta a UF.
  * - `endereco.complemento`/`bairro`/`cep`: a confirmar.
  */
 
@@ -17,7 +16,7 @@ export const profissional = {
   nome: "Dra. Fernanda Furmankiewicz",
   nomeCurto: "Fernanda Furmankiewicz",
   profissao: "Nutricionista",
-  crn: "CRN 6042",
+  crn: "CRN-3 6042",
   formacao: "Formação USP",
   experiencia: "Mais de 30 anos de carreira",
 };
@@ -90,7 +89,7 @@ export const sobre = {
   titulo: "Quem é a Dra. Fernanda",
   paragrafos: [
     "Sou nutricionista formada pela USP. Minha experiência de mais de 30 anos ao longo da carreira, em diferentes áreas da nutrição, ampliou meu olhar sobre a alimentação e contribui para a forma como avalio e oriento cada paciente.",
-    "Acredito que uma alimentação saudável também precisa ser saborosa, prazerosa e possível de compartilhar. Por isso, nas consultas, considero não apenas as necessidades de saúde, mas também a história, os hábitos, a cultura e a rotina de cada pessoa. Gosto de explicar as orientações e ajudar a construir mudanças práticas que possam fazer parte da vida, sem deixar de lado o prazer de comer.",
+    "Acredito que uma alimentação saudável também precisa ser saborosa, prazerosa e sociável. Por isso, nas consultas, considero não apenas as necessidades de saúde, mas também a história, os hábitos, a cultura e a rotina de cada pessoa. Gosto de explicar as orientações e ajudar a construir mudanças práticas que possam fazer parte da vida, sem deixar de lado o prazer de comer.",
   ],
   trajetoriaTitulo: "Trajetória",
   trajetoria: [
@@ -104,7 +103,7 @@ export const sobre = {
 
 export const sinais = {
   rotulo: "Orientação nutricional",
-  titulo: "Quando procurar uma nutricionista",
+  titulo: "Quando procurar um nutricionista",
   intro:
     "A orientação nutricional pode ajudar em diferentes momentos da vida. Não é preciso esperar um diagnóstico para começar a cuidar da alimentação.",
   itens: [
@@ -389,7 +388,7 @@ export const agendar = {
   avisoWhatsapp:
     "Ao clicar, o WhatsApp será aberto com a solicitação preenchida. Para concluir o contato, envie a mensagem.",
   unidade: [
-    { rotulo: "Atendimento presencial", texto: "Quartas-feiras pela manhã, no Instituto Emunah" },
+    { rotulo: "Atendimento presencial", texto: "Quartas-feiras pela manhã, ou conforme disponibilidade." },
     { rotulo: "Atendimento online", texto: "Outros dias, conforme disponibilidade" },
     { rotulo: "Convênio", texto: "Atendimento particular" },
   ],
